@@ -1,8 +1,8 @@
 const Koa = require('koa');
 const cors =  require('@koa/cors');
 var serve = require('koa-static');
-var app = express();
-const cors = require("cors");
+// var app = express();
+// const cors = require("cors");
 const router = require('./router.js')
 const app = new Koa();
 var PORT = 3000;
