@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server for soliditity project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RahatSaqib/solidity-server.git"
+  },
+  "author": "\"Rahat\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RahatSaqib/solidity-server/issues"
+  },
+  "homepage": "https://github.com/RahatSaqib/solidity-server#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
