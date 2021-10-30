@@ -10,8 +10,8 @@ app.use(cors())
 .use(serve('./images'))
 .use(router.routes());
 
-app.get('/', function(req, res) {
-    res.status(200).send('Hello world');
-});
+// app.get('/', function(req, res) {
+//     res.status(200).send('Hello world');
+// });
 
 app.listen(PORT);

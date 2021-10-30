@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/RahatSaqib/solidity-server#readme",
   "dependencies": {
-    "koa": "^2.13.4"
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^10.1.1",
+    "koa": "^2.13.4",
+    "koa-static": "^5.0.0"
   }
 }
