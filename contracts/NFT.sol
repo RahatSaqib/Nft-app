@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >= 0.5 < 0.9;
-
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract NFT is ERC721{
@@ -15,7 +14,7 @@ contract NFT is ERC721{
         _safeMint(to, nextTokenId);
         nextTokenId++;
     }
-    function _baseUri() internal view override returns(string memory){
+    function _baseURI() internal view override returns(string memory){
         return 'https://secret-island-15010.herokuapp.com/';
     }
 }
