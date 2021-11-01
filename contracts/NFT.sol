@@ -14,7 +14,7 @@ contract NFT is ERC721{
         _safeMint(to, nextTokenId);
         nextTokenId++;
     }
-    function _baseURI() internal view override returns(string memory){
+    function _baseURI() internal pure override returns(string memory){
         return 'https://fierce-headland-59830.herokuapp.com/';
     }
 }
