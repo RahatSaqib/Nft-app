@@ -40,7 +40,7 @@ module.exports = {
   networks: {
     ropsten: {
       provider: function() {
-        return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/e041dc614b764b92bf38ca3f9a1d7793" ,2)
+        return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/e041dc614b764b92bf38ca3f9a1d7793",5)
       },
       network_id: 3
     }
