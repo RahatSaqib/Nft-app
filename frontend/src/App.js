@@ -1,8 +1,29 @@
 import logo from './logo.svg';
+import React ,{useState , useEffect} from 'react';
 import './App.css';
 import Header from'./components/header'
+import getBlockChain from'./etherum.js';
+import axios from 'axios';
+
 
 function App() {
+  const [tokenInfo , setTokenInfo] = useState(undefined);
+
+  useEffect(()=>{
+    const init = async ()=>{
+      const {nft} = await getBlockChain();
+      const tokenURI = await nft.tokenURI(0);
+      const{ data } = await axios.get(tokenURI);
+      console.log(data.result.image);
+      setTokenInfo(data.result);
+    }
+    init();
+  }, []);
+  if(typeof tokenInfo == 'undefined'){
+    return 'Loading ..';
+  }
+
+
   return (
     <div className="App">
       <Header/>
@@ -19,7 +40,7 @@ function App() {
                 </svg>
               </div>
               <div className="flex-grow pl-6">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
+                <h2 className="text-gray-900 text-lg title-font font-medium mb-2">{tokenInfo.name}</h2>
                 <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard ugh iceland kickstarter tumblr live-edge tilde.</p>
                 <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
                   <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">

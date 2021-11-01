@@ -1,5 +1,5 @@
 import {ethers, Contract } from 'ethers';
-import NFT from './contracts/NFT.json'
+import NFT from '../contracts/NFT.json'
 
 const getBlockChain =()=>
  new Promise((resolve,reject)=>{
