@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
-pragma solidity >= 0.5 < 0.9;
+pragma solidity >=0.5 <0.9;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract NFT is ERC721{
