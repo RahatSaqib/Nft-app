@@ -42,7 +42,8 @@ module.exports = {
       provider: function() {
         return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/e041dc614b764b92bf38ca3f9a1d7793",5)
       },
-      network_id: 3
+      network_id: 3,
+      skipDryRun : true
     }
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
