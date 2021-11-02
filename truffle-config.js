@@ -1,5 +1,5 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const mnemonic ="weekend butter turkey crouch into candy grit spawn radio response hand spoil stock debris supply"
+const mnemonic ="abandon gun actual cruise alone dial puppy symbol invest bachelor tail key"
 
 /**
  * Use this file to configure your truffle project. It's seeded with some
@@ -46,13 +46,12 @@ module.exports = {
     //   skipDryRun : true,
 
     // }
-    ropsten:{
+    ganache:{
       provider: function() {
-        return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/794318b5ba1046b9857d73b7222a066b");
+        return new HDWalletProvider(mnemonic, "http://127.0.0.1:7545");
       },
-      network_id: 3,
-      gas: 9999999,
-      skipDryRun : true
+      network_id: 5777,
+      skipDryRun : true,
   
   }
     // Useful for testing. The `development` name is special - truffle uses it by default
