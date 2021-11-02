@@ -5,7 +5,7 @@ var serve = require('koa-static');
 // const cors = require("cors");
 const router = require('./router.js')
 const app = new Koa();
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 app
     .use(cors())
     .use(serve('./images'))
