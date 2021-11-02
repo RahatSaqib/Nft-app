@@ -1,5 +1,5 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const mnemonic ="recall advance romance leaf twelve mosquito swallow moment badge nominee forget few near quote work"
+const mnemonic ="off add quit broccoli glare frost shiver regret denial leaf narrow copy"
 
 /**
  * Use this file to configure your truffle project. It's seeded with some
