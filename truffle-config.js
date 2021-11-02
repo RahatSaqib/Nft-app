@@ -1,5 +1,5 @@
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const mnemonic ="off add quit broccoli glare frost shiver regret denial leaf narrow copy"
+const mnemonic ="weekend butter turkey crouch into candy grit spawn radio response hand spoil stock debris supply"
 
 /**
  * Use this file to configure your truffle project. It's seeded with some
@@ -38,13 +38,23 @@ module.exports = {
    */
   contracts_build_directory :'./frontend/src/contracts',
   networks: {
-    ropsten: {
+    // ropsten: {
+    //   provider: function() {
+    //     return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/e041dc614b764b92bf38ca3f9a1d7793")
+    //   },
+    //   network_id: 3,
+    //   skipDryRun : true,
+
+    // }
+    ropsten:{
       provider: function() {
-        return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/e041dc614b764b92bf38ca3f9a1d7793",5)
+        return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/794318b5ba1046b9857d73b7222a066b/");
       },
       network_id: 3,
+      gas: 9999999,
       skipDryRun : true
-    }
+  
+  }
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
     // You should run a client (like ganache-cli, geth or parity) in a separate terminal
