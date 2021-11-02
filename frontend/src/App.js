@@ -1,8 +1,9 @@
 import logo from './logo.svg';
-import React ,{ useState , useEffect} from 'react';
+
 import './App.css';
 import Header from'./components/header'
 
+function App() {
 
 
   return (
@@ -20,8 +21,8 @@ import Header from'./components/header'
               
               </div>
               <div className="flex-grow pl-6">
-                <h2 className="text-gray-900 text-lg title-font font-medium mb-2">{tokenInfo.name}</h2>
-                <p className="leading-relaxed text-base">{tokenInfo.description}</p>
+                <h2 className="text-gray-900 text-lg title-font font-medium mb-2">Nft</h2>
+                <p className="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine, ramps microdosing banh mi pug VHS try-hard ugh iceland kickstarter tumblr live-edge tilde.</p>
                 <a className="mt-3 text-indigo-500 inline-flex items-center">Learn More
                   <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>

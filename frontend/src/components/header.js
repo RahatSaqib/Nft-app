@@ -1,28 +1,28 @@
 import '../App.css';
 import Navbar from './navbar';
-import getBlockChain from'../etherum.js';
+import getBlockChain from '../etherum.js';
 import axios from 'axios';
 
+import React ,{ useState , useEffect} from 'react';
 
-function App() {
-  const [tokenInfo , setTokenInfo] = useState(undefined);
-
-  useEffect(()=>{
-    const init = async ()=>{
-      const {nft} = await getBlockChain();
-      const tokenURI = await nft.tokenURI(0);
-      const{ data } = await axios.get(tokenURI);
-      console.log(data.result.image);
-      setTokenInfo(data.result);
-    }
-    init();
-  }, []);
-  if(typeof tokenInfo == 'undefined'){
-    return 'Loading ..';
-  }
 
 
 function Header(){
+    const [tokenInfo , setTokenInfo] = useState(undefined);
+
+    useEffect(()=>{
+      const init = async ()=>{
+        const {nft} = await getBlockChain();
+        const tokenURI = await nft.tokenURI(0);
+        const{ data } = await axios.get(tokenURI);
+        console.log(data.result.image);
+        setTokenInfo(data.result);
+      }
+      init();
+    }, []);
+    if(typeof tokenInfo == 'undefined'){
+      return 'Loading ..';
+    }
     return(
         <>
         <Navbar></Navbar>
